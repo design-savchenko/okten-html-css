@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 12px;
+    font-size: 20px;
+}
+
+p {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
