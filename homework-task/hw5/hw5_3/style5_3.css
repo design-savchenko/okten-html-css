@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wave-loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.boat {
+    animation: floatBoat 2s ease-in-out infinite;
+}
+
+@keyframes floatBoat {
+    0%   { transform: translateY(0px) rotate(0deg); }
+    25%  { transform: translateY(-5px) rotate(-1.5deg); }
+    50%  { transform: translateY(0px) rotate(0deg); }
+    75%  { transform: translateY(5px) rotate(1.5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.wave {
+    margin-top: 20px;
+    width: 100%;
+    height: 14px;
+
+    background: linear-gradient(
+            90deg,
+            rgba(0, 170, 255, 1) 0%,
+            rgba(0, 170, 255, 0) 25%,
+            rgba(0, 170, 255, 1) 50%,
+            rgba(0, 170, 255, 0) 75%,
+            rgba(0, 170, 255, 1) 100%
+    );
+
+    background-size: 200% 100%;
+    animation: waveLoop 2s linear infinite;
+    opacity: 0.6;
+    border-radius: 6px;
+}
+
+@keyframes waveLoop {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: -100% 0%;
+    }
+}
